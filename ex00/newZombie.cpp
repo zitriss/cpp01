@@ -5,8 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 16:37:59 by tlize             #+#    #+#             */
-/*   Updated: 2025/10/07 16:38:07 by tlize            ###   ########.fr       */
+/*   Created: 2025/10/18 16:21:01 by tlize             #+#    #+#             */
+/*   Updated: 2025/10/18 17:27:04 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+Zombie* newZombie(std::string name){
+    return (new Zombie(name));
+}

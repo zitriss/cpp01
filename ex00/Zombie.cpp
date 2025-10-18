@@ -6,7 +6,22 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:38:25 by tlize             #+#    #+#             */
-/*   Updated: 2025/10/07 16:38:26 by tlize            ###   ########.fr       */
+/*   Updated: 2025/10/18 17:28:38 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+Zombie::Zombie(std::string name)
+{
+    this->name = name;
+}
+
+Zombie::~Zombie()
+{
+    std::cout << this->name << " deleted\n";
+}
+
+void	Zombie::announce(void) {
+    std::cout << this->name << ": BraiiiiiiinnnzzzZ...\n";
+}
