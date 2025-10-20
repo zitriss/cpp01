@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 16:38:28 by tlize             #+#    #+#             */
-/*   Updated: 2025/10/18 18:07:13 by tlize            ###   ########.fr       */
+/*   Created: 2025/10/18 17:56:05 by tlize             #+#    #+#             */
+/*   Updated: 2025/10/20 16:37:53 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Zombie.hpp"
 
-#include <iostream>
-
-class Zombie
-{
-public:
-    Zombie(std::string name);
-    ~Zombie(void);
-    void    announce(void);
-private:
-    std::string name;
-};
-
-void	randomChump(std::string name);
-Zombie*   newZombie(std::string name);
-
-#endif
+int	main(void){
+	int n = 5;
+	Zombie* tsunami = zombieHorde(n, "Graouhman");
+	for (int i = 0; i < n; i++)
+        tsunami[i].announce();
+    freeHorde(tsunami, n);
+}

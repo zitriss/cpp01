@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 16:38:28 by tlize             #+#    #+#             */
-/*   Updated: 2025/10/18 18:07:13 by tlize            ###   ########.fr       */
+/*   Created: 2025/10/18 18:08:17 by tlize             #+#    #+#             */
+/*   Updated: 2025/10/20 16:33:57 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Zombie.hpp"
 
-#include <iostream>
+Zombie* zombieHorde(int N, std::string name){
+    Zombie* ptr = static_cast<Zombie*>(std::malloc(N * sizeof(Zombie)));
+    if (!ptr)
+        return NULL;
+    for (int i = 0; i < N; i++)
+        new (&ptr[i]) Zombie(name);
+    return ptr;
+}
 
-class Zombie
-{
-public:
-    Zombie(std::string name);
-    ~Zombie(void);
-    void    announce(void);
-private:
-    std::string name;
-};
+void freeHorde(Zombie *ptr, int N){
+    for (int i = 0; i < N; i++)
+        ptr[i].~Zombie();
+    std::free(ptr);
+}
 
-void	randomChump(std::string name);
-Zombie*   newZombie(std::string name);
 
-#endif
