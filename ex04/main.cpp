@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 16:00:16 by tlize             #+#    #+#             */
-/*   Updated: 2025/10/22 18:17:59 by tlize            ###   ########.fr       */
+/*   Created: 2025/10/22 16:56:41 by tlize             #+#    #+#             */
+/*   Updated: 2025/10/22 18:10:24 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include <iostream>
+#include <fstream>
 
-Weapon::Weapon(std::string newType)
-{
-    this->type= newType;
-}
-Weapon::~Weapon(void){
+int	checkFilename(std::string& filename){
     
 }
 
-void    Weapon::setType(std::string newType){
-    this->type = newType;
-}
-
-const std::string Weapon::getType(void){
-    std::string& rType = this->type;
-    return (rType);
+int main(int argc, char **argv) {
+    if (argc != 4)
+    {
+        std::cout << "wrong number of arguments" << std::endl;
+        return (0);        
+    }
+	std::string filename = argv[1];
+    std::ofstream test;
+    test.open (filename);
+    test.close();
+    return (0);
 }
