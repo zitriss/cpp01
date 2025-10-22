@@ -5,17 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 16:38:22 by tlize             #+#    #+#             */
-/*   Updated: 2025/10/21 16:08:30 by tlize            ###   ########.fr       */
+/*   Created: 2025/10/22 15:50:53 by tlize             #+#    #+#             */
+/*   Updated: 2025/10/22 16:22:13 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-int main(void)
+int main()
 {
-    Zombie* superZomb = newZombie("Delire");
-    randomChump("Didier");
-	superZomb->announce();
-	delete superZomb;
+    {
+        Weapon club = Weapon("crude spiked club");
+        
+        HumanA bob("Bob", club);
+        bob.attack();
+        club.setType("some other type of club");
+        bob.attack();
+    }
+    {
+        Weapon club = Weapon("crude spiked club");
+        
+        HumanB jim("Jim");
+        jim.setWeapon(club);
+        jim.attack();
+        club.setType("some other type of club");
+        jim.attack();
+    }
+        
+    return 0;
 }
