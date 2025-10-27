@@ -1,10 +1,10 @@
 # == Makefile ==
 
-NAME = zombie
+NAME = Harl
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRC = main.cpp Harl.cpp
 OBJ = $(SRC:.cpp=.o)
 
 # == Couleurs pour les messages dans le terminal ==
@@ -15,7 +15,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
-	@echo "$(YELLOW)zombie graouh$(NC)"
+	@echo "$(YELLOW)it's harlin time$(NC)"
 
 %.o: %.cpp
 	$(CPP) $(CPPFLAGS) -c $< -o $@

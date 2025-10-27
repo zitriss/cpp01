@@ -1,4 +1,4 @@
-# == Makefile pour phonebook ==
+# == Makefile ==
 
 NAME = clash
 CPP = c++

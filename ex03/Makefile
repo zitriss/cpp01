@@ -1,4 +1,4 @@
-# == Makefile pour phonebook ==
+# == Makefile ==
 
 NAME = violence
 CPP = c++

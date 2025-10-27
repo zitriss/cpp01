@@ -1,4 +1,4 @@
-# == Makefile pour phonebook ==
+# == Makefile ==
 
 NAME = brain
 CPP = c++
