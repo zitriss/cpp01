@@ -1,6 +1,6 @@
 # == Makefile pour phonebook ==
 
-NAME = ex04
+NAME = clash
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -15,7 +15,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
-	@echo "$(YELLOW)replacing$(NC)"
+	@echo "$(YELLOW)sneaky$(NC)"
 
 %.o: %.cpp
 	$(CPP) $(CPPFLAGS) -c $< -o $@
