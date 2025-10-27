@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:15:01 by tlize             #+#    #+#             */
-/*   Updated: 2025/10/27 17:57:33 by tlize            ###   ########.fr       */
+/*   Updated: 2025/10/27 18:05:10 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,21 +34,31 @@ int main(int argc, char **argv)
 	switch (c)
 	{
 		case 0:
+			std::cout << "[DEBUG]" << std::endl;
 			superHarl.complain("DEBUG");
+			std::cout << "\n[INFO]" << std::endl;
     		superHarl.complain("INFO");
+			std::cout << "\n[WARNING]" << std::endl;
     		superHarl.complain("WARNING");
+			std::cout << "\n[ERROR]" << std::endl;
     		superHarl.complain("ERROR");
 			break;
 		case 1:
+			std::cout << "[INFO]" << std::endl;
     		superHarl.complain("INFO");
+			std::cout << "\n[WARNING]" << std::endl;
     		superHarl.complain("WARNING");
+			std::cout << "\n[ERROR]" << std::endl;
     		superHarl.complain("ERROR");
 			break;
 		case 2:
+			std::cout << "[WARNING]" << std::endl;
     		superHarl.complain("WARNING");
+			std::cout << "\n[ERROR]" << std::endl;
     		superHarl.complain("ERROR");
 			break;
 		case 3:
+			std::cout << "[ERROR]" << std::endl;
     		superHarl.complain("ERROR");
 			break;
 		default:
