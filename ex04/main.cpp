@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:56:41 by tlize             #+#    #+#             */
-/*   Updated: 2025/10/27 15:35:47 by tlize            ###   ########.fr       */
+/*   Updated: 2025/10/27 15:41:40 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@ bool	checkFilename(char *readName)
 	return (file.good());
 }
 
-void replaceAll(std::string &str, const char *old_sub, const char *new_sub)
+void replaceAll(std::string &str, const char *oldSub, const char *newSub)
 {
-    std::string old_s = old_sub;
-    std::string new_s = new_sub;
+    std::string strOldSub = oldSub;
+    std::string strNewSub = newSub;
     std::string result;
     size_t pos = 0;
     size_t found;
 
-    while ((found = str.find(old_s, pos)) != std::string::npos)
+    while ((found = str.find(strOldSub, pos)) != std::string::npos)
     {
         result.append(str, pos, found - pos);
-        result += new_s;
-        pos = found + old_s.length();
+        result += strNewSub;
+        pos = found + strOldSub.length();
     }
     result += str.substr(pos);
     str = result;
