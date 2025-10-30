@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 17:32:21 by tlize             #+#    #+#             */
-/*   Updated: 2025/10/22 16:23:11 by tlize            ###   ########.fr       */
+/*   Updated: 2025/10/30 18:29:00 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,8 @@ void    HumanB::setWeapon(Weapon& pWeapon)
 
 void    HumanB::attack(void)
 {
-    std::cout << this->name << " attacks with their " << this->weaponHeld->getType() << std::endl;
+	if (!this->weaponHeld)
+		std::cout << this->name << " met une mandale de forrain " << std::endl;
+	else
+		std::cout << this->name << " attacks with their " << this->weaponHeld->getType() << std::endl;
 }
