@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:38:28 by tlize             #+#    #+#             */
-/*   Updated: 2025/10/20 16:30:53 by tlize            ###   ########.fr       */
+/*   Updated: 2025/10/30 17:54:25 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@
 class Zombie
 {
 public:
+	Zombie(void);
     Zombie(std::string name);
+	void	SetName(std::string name);
     ~Zombie(void);
     void    announce(void);
 private:
@@ -27,6 +29,4 @@ private:
 };
 
 Zombie* zombieHorde(int N, std::string name);
-void freeHorde(Zombie *ptr, int N);
-
 #endif

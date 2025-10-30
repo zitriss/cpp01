@@ -6,13 +6,22 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:38:25 by tlize             #+#    #+#             */
-/*   Updated: 2025/10/21 16:08:01 by tlize            ###   ########.fr       */
+/*   Updated: 2025/10/30 17:55:12 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
+Zombie::Zombie(void)
+{
+}
+
 Zombie::Zombie(std::string name)
+{
+    this->name = name;
+}
+
+void	Zombie::SetName(std::string name)
 {
     this->name = name;
 }
