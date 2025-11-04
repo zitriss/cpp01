@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 17:32:21 by tlize             #+#    #+#             */
-/*   Updated: 2025/10/30 18:29:00 by tlize            ###   ########.fr       */
+/*   Updated: 2025/11/04 15:24:55 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 HumanB::HumanB(std::string newName)
 {
     this->name = newName;
+	this->weaponHeld = NULL;
 }
 
 HumanB::~HumanB(void)
@@ -29,7 +30,7 @@ void    HumanB::setWeapon(Weapon& pWeapon)
 
 void    HumanB::attack(void)
 {
-	if (!this->weaponHeld)
+	if (this->weaponHeld== NULL)
 		std::cout << this->name << " met une mandale de forrain " << std::endl;
 	else
 		std::cout << this->name << " attacks with their " << this->weaponHeld->getType() << std::endl;
